@@ -89,44 +89,6 @@ temp3_nino3_std = dim_stddev_n_Wrap(temp3_nino3_ann, 0)
 dTdy1_index_std = dim_stddev_n_Wrap(dTdy1_index_ann, 0) 
 dTdy2_index_std = dim_stddev_n_Wrap(dTdy2_index_ann, 0) 
 dTdy3_index_std = dim_stddev_n_Wrap(dTdy3_index_ann, 0) 
-;================================================================================
-;; calculate clm 
-;clm_temp1 = clmMonTLLL(temp1)-dim_avg_n_Wrap(clmMonTLLL(temp1), 0) ; 12month,lev,lat,lon
-;clm_temp2 = clmMonTLLL(temp2)-dim_avg_n_Wrap(clmMonTLLL(temp2), 0)
-;clm_temp3 = clmMonTLLL(temp3)-dim_avg_n_Wrap(clmMonTLLL(temp3), 0)
-;
-;copy_VarMeta(temp1(0:11,:,:,:), clm_temp1)
-;copy_VarMeta(temp2(0:11,:,:,:), clm_temp2)
-;copy_VarMeta(temp3(0:11,:,:,:), clm_temp3)
-;
-;dlat   = (temp1&lat(2)-temp1&lat(1))*rad
-;dY     = R*dlat
-;
-;clm_dTdy1   = center_finite_diff_n(clm_temp1, dY, False, 0, 1)*1000000.
-;clm_dTdy2   = center_finite_diff_n(clm_temp2, dY, False, 0, 1)*1000000.
-;clm_dTdy3   = center_finite_diff_n(clm_temp3, dY, False, 0, 1)*1000000.
-;
-;copy_VarMeta(clm_temp1(:,:,:,:), clm_dTdy1)
-;copy_VarMeta(clm_temp1(:,:,:,:), clm_dTdy2)
-;copy_VarMeta(clm_temp1(:,:,:,:), clm_dTdy3)
-;
-;;---->horizontal mean 
-;clm_temp1_xy  = dim_avg_n_Wrap(clm_temp1(:,ilev1:ilev2,:,:),1)
-;clm_temp2_xy  = dim_avg_n_Wrap(clm_temp2(:,ilev1:ilev2,:,:),1)
-;clm_temp3_xy  = dim_avg_n_Wrap(clm_temp3(:,ilev1:ilev2,:,:),1)
-;
-;clm_dTdy1_xy  = dim_avg_n_Wrap(clm_dTdy1(:,lev1:ilev2,:,:),1)
-;clm_dTdy2_xy  = dim_avg_n_Wrap(clm_dTdy2(:,lev1:ilev2,:,:),1)
-;clm_dTdy3_xy  = dim_avg_n_Wrap(clm_dTdy3(:,lev1:ilev2,:,:),1)
-;
-;; calculate domain-avg
-;clm_temp1_nino3 = wgt_areaave_Wrap(clm_temp1_xy(:,{-2:2},{200:270}), 1.0, 1.0, 0)
-;clm_temp2_nino3 = wgt_areaave_Wrap(clm_temp2_xy(:,{-2:2},{200:270}), 1.0, 1.0, 0)
-;clm_temp3_nino3 = wgt_areaave_Wrap(clm_temp3_xy(:,{-2:2},{200:270}), 1.0, 1.0, 0)
-;
-;clm_dTdy1_xy_nino3  = wgt_areaave_Wrap(clm_dTdy1_xy(:,{0:5},{200:270}), 1.0, 1.0, 0)
-;clm_dTdy2_xy_nino3  = wgt_areaave_Wrap(clm_dTdy2_xy(:,{0:5},{200:270}), 1.0, 1.0, 0)
-;clm_dTdy3_xy_nino3  = wgt_areaave_Wrap(clm_dTdy3_xy(:,{0:5},{200:270}), 1.0, 1.0, 0)
 ;=============================================================
 ; read UVEL data
 ;=============================================================
@@ -219,50 +181,7 @@ print(dUdy3_index_std)
 dUdy01_index_std = dim_stddev_n_Wrap(dUdy01_index_ann, 0) 
 dUdy02_index_std = dim_stddev_n_Wrap(dUdy02_index_ann, 0) 
 dUdy03_index_std = dim_stddev_n_Wrap(dUdy03_index_ann, 0) 
-;================================================================================
-
-;; calculate clm 
-;clm_uvel1 = clmMonTLLL(uvel1)-dim_avg_n_Wrap(clmMonTLLL(uvel1), 0) ; 12month,lev,lat,lon
-;clm_uvel2 = clmMonTLLL(uvel2)-dim_avg_n_Wrap(clmMonTLLL(uvel2), 0)
-;clm_uvel3 = clmMonTLLL(uvel3)-dim_avg_n_Wrap(clmMonTLLL(uvel3), 0)
-;
-;copy_VarMeta(uvel1(0:11,:,:,:), clm_uvel1)
-;copy_VarMeta(uvel2(0:11,:,:,:), clm_uvel2)
-;copy_VarMeta(uvel3(0:11,:,:,:), clm_uvel3)
-;
-;dlat   = (uvel1&lat(2)-uvel1&lat(1))*rad
-;dY     = R*dlat
-;
-;dUdy1  = center_finite_diff_n(clm_uvel1_DJF, dY, False, 0, 1)*1000000.
-;dUdy2  = center_finite_diff_n(clm_uvel1_MAM, dY, False, 0, 1)*1000000.
-;dUdy3  = center_finite_diff_n(clm_uvel1_JJA, dY, False, 0, 1)*1000000.
-;
-;copy_VarMeta(clm_uvel1(:,:,:,:), dUdy1)
-;copy_VarMeta(clm_uvel1(:,:,:,:), dUdy2)
-;copy_VarMeta(clm_uvel1(:,:,:,:), dUdy3)
-; 
-;clm_uvel1_xy  = dim_avg_n_Wrap(clm_uvel1(:,ilev1:ilev2,:,:),0)
-;clm_uvel1_xy  = dim_avg_n_Wrap(clm_uvel2(:,ilev1:ilev2,:,:),0)
-;clm_uvel1_xy  = dim_avg_n_Wrap(clm_uvel3(:,ilev1:ilev2,:,:),0)
-;
-;dUdy1_xy  = dim_avg_n_Wrap(dUdy1(:,ilev1:ilev2,:,:),0)
-;dUdy1_xy  = dim_avg_n_Wrap(dUdy2(:,ilev1:ilev2,:,:),0)
-;dUdy1_xy  = dim_avg_n_Wrap(dUdy3(:,ilev1:ilev2,:,:),0)
-;
-;; calculate domain-avg
-;clm_uvel1_SEC = wgt_areaave_Wrap(clm_uvel1_xy(:,{1:3},{200:260}), 1.0, 1.0, 0)
-;clm_uvel2_SEC = wgt_areaave_Wrap(clm_uvel2_xy(:,{1:3},{200:260}), 1.0, 1.0, 0)
-;clm_uvel3_SEC = wgt_areaave_Wrap(clm_uvel3_xy(:,{1:3},{200:260}), 1.0, 1.0, 0)
-;
-;clm_uvel1_NECC = wgt_areaave_Wrap(clm_uvel1_xy(:,{5:7},{200:260}), 1.0, 1.0, 0)
-;clm_uvel2_NECC = wgt_areaave_Wrap(clm_uvel2_xy(:,{5:7},{200:260}), 1.0, 1.0, 0)
-;clm_uvel3_NECC = wgt_areaave_Wrap(clm_uvel3_xy(:,{5:7},{200:260}), 1.0, 1.0, 0)
-;
-;dUdy1_xy_nino3  = wgt_areaave_Wrap(dUdy1_xy(:,{3:5},{200:260}), 1.0, 1.0, 0)
-;dUdy2_xy_nino3  = wgt_areaave_Wrap(dUdy2_xy(:,{3:5},{200:260}), 1.0, 1.0, 0)
-;dUdy3_xy_nino3  = wgt_areaave_Wrap(dUdy3_xy(:,{3:5},{200:260}), 1.0, 1.0, 0)
 ;==========================================================================================
-
 
 data1 = new((/2,12/), float)
 data1(0,:) = dTdy1_index_ave
