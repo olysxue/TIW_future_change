@@ -18,9 +18,9 @@ All scripts were developed and tested using **NCL version 6.6.2**. Each script c
 | `Figure4_TIW_EKE_budget_analysis.ncl` | Fig. 4 | TIW-EKE budget analysis under different CO2 simulations in CESM-UHR | Barotrpic energy conversion rate and Baroclinic energy conversion rate in CESM-UHR |
 
 ---
-Due to file size constraints, only selected `.nc` samples are included in this GitHub repo.
+Due to file size constraints, only selected `.nc` are included in this GitHub repo.
 
-▶ **Full processed datasets** (TIW-EKE, zonal currents, SST, shear) are available at Zenodo:  
+▶ **Full processed datasets** () are available at Zenodo:  
 ---
 
 ## How to Run
