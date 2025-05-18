@@ -12,7 +12,7 @@ All scripts were developed and tested with **NCL version 6.6.2**. Each script co
 ## Script Overview
 
 | Script | Corresponding Figure | Description | Required Data |
-|--------|----------------------|-------------|
+|--------|----------------------|-------------|---------------|
 | `Extended_Figure1_TIW_CMEMS_CESM_E3SMv1v2.ncl` | Extended Data Fig. 1 | Comparison of observed (CMEMS) and modeled (CESM-UHR, E3SMv1/v2) TIW metrics (EKE, VVEL, SST, SSH) | TIW metrics in CESM-UHR |
 | `Extended_Figure2_E3SMv1_v2_TIW_intensity.ncl` | Extended Data Fig. 2 | Changes in TIW-EKE, SST, and SSH between PD and 4xCO2 in E3SMv1 and v2 | TIW metrics in E3SMv1/v2 |
 | `Extended_Figure3_GLORYS12_CESM_E3SM_comparison.ncl` | Extended Data Fig. 3 | Comparison of climatological SST and zonal current structures in models and GLORYS12 reanalysis | monthly TEMP and UVEL for GLORYS12, CESM-UHR and E3SM|
