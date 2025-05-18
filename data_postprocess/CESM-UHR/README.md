@@ -22,6 +22,8 @@ All scripts were tested with **NCL6.6.2 & cdo 2.0**.
   - `CESM_UHR_SSH_filter_10–50.ncl`
   - `CESM_UHR_UVEL_filter_10–50.ncl`
   - `CESM_UHR_VVEL_filter_10–50.ncl`
+  - `CESM_UHR_WVEL_filter_10–50.ncl`
+  - `CESM_UHR_density_filter_10–50.ncl`
 
 ### **Step 3: Compute TIW Intensity Metrics**
 - **Goal**: Quantify TIW amplitude using filtered signal variance
@@ -47,11 +49,11 @@ All scripts were tested with **NCL6.6.2 & cdo 2.0**.
 
 | Script | Description |
 |--------|-------------|
-| `CESM_UHR_SST_filter_10–50.ncl` | Band-pass filter SST anomalies |
-| `CESM_UHR_SSH_filter_10–50.ncl` | Band-pass filter SSH anomalies |
-| `CESM_UHR_UVEL_filter_10–50.ncl` | Band-pass filter zonal velocity anomalies |
-| `CESM_UHR_VVEL_filter_10–50.ncl` | Band-pass filter meridional velocity anomalies |
-| _(Other scripts not shown here may handle climatology removal, flux calculation, etc.)_ |
+| `Step2_CESM_UHR_SST_filter_10–50.ncl` | Band-pass filter SST anomalies |
+| `Step2_CESM_UHR_SSH_filter_10–50.ncl` | Band-pass filter SSH anomalies |
+| `Step2_CESM_UHR_UVEL_filter_10–50.ncl` | Band-pass filter zonal velocity anomalies |
+| `Step2_CESM_UHR_VVEL_filter_10–50.ncl` | Band-pass filter meridional velocity anomalies |
+| `Step2_CESM_UHR_WVEL_filter_10–50.ncl` | Band-pass filter vertical velocity anomalies |
 
 ---
 
