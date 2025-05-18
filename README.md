@@ -1,4 +1,4 @@
-# Code and data for "Consistent Projected weakening of Tropical Instability Waves under greenhouse warming" submitted to *Nature Communications*.
+# Code for "Consistent Projected weakening of Tropical Instability Waves under greenhouse warming" submitted to *Nature Communications*.
 
 This repository contains the code and processed data supporting the manuscript:
 
@@ -9,6 +9,7 @@ This repository contains the code and processed data supporting the manuscript:
 - `data_postprocess/CESM-UHR/`: CESM-UHR postprocessing scripts (e.g., filtering, TIW metric etc.).
 - `data_postprocess/E3SM/`: E3SM postprocessing scripts (e.g., regridding, filtering, TIW metric etc.).
 - `data_postprocess/HighresMIP/`: HighresMIP postprocessing scripts (e.g., filtering, TIW metric etc.).
+- `data_postprocess/GLORYS12/`: GLROSY12 postprocessing scripts (e.g., filtering, TIW metric etc.).
 
 
 ## Dependencies
