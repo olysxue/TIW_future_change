@@ -34,7 +34,7 @@ All scripts were tested with **NCL6.6.2 & cdo 2.0**.
 - **Goal**: Diagnose TIW energy sources
 - **Terms computed**:
   - Barotropic energy conversion (BTR): \[-⟨u'v'⟩ ∂⟨u⟩/∂y\]
-  - Baroclinic energy conversion (BCR): \[-g/ρ₀ ⟨w'T'⟩/⟨∂T/∂z⟩\]
+  - Baroclinic energy conversion (BCR): \[-⟨ρ'w'⟩/g\]
 - **Input**: Filtered and mean-state fields of velocity and temperature
 
 ### **Step 5: Estimate TIW-Induced Fluxes**
