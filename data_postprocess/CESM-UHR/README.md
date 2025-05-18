@@ -2,7 +2,7 @@
 
 This folder contains NCL and cdo scripts used to process CESM-UHR simulation output for TIW-related diagnostics. The full workflow includes anomaly extraction, band-pass filtering, TIW intensity estimation, energy conversion calculations, and flux diagnostics.
 
-All scripts were tested with **NCL6.6.2 & cdo 1.9**.
+All scripts were tested with **NCL6.6.2 & cdo 2.0**.
 
 ---
 
@@ -66,7 +66,7 @@ All scripts were tested with **NCL6.6.2 & cdo 1.9**.
 ## 📥 Data Access
 
 - Processed outputs are archived at:  
-  ▶ [https://doi.org/10.5281/zenodo.XXXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXXX)  
+  ▶ [https://doi.org/10.5281/zenodo.15454130](https://doi.org/10.5281/zenodo.15454130)  
 
 ---
 
