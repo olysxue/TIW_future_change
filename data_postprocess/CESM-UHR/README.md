@@ -11,7 +11,7 @@ All scripts were tested with **NCL6.6.2 & cdo 2.0**.
 ### **Step 1: Remove Daily Climatology**
 - **Goal**: Remove mean seasonal cycle to isolate inter-daily variability
 - **Method**: Compute daily climatology from multiyear mean and subtract it
-- **Input**: CESM-UHR daily outputs (SST, SSH, UVEL, VVEL)
+- **Input**: CESM-UHR daily outputs (SST, SSH, UVEL, VVEL, WVEL, density)
 - **Output**: Daily anomalies (`*_anom.nc`)
 
 ### **Step 2: Apply Fourier 10–50 Day Band-Pass Filter**
