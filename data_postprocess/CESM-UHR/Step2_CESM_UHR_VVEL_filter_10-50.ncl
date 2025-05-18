@@ -4,9 +4,9 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/shea_util.ncl" 
 
 begin
- dir1 = "/glade/scratch/aoyunxue/TIW_data/CESM2_HR/PD/VVEL/"
- dir2 = "/glade/scratch/aoyunxue/TIW_data/CESM2_HR/2xCO2/VVEL/"
- dir3 = "/glade/scratch/aoyunxue/TIW_data/CESM2_HR/4xCO2/VVEL/"
+ dir1 = "/glade/scratch/aoyunxue/TIW_data/CESM_HR/PD/VVEL/"
+ dir2 = "/glade/scratch/aoyunxue/TIW_data/CESM_HR/2xCO2/VVEL/"
+ dir3 = "/glade/scratch/aoyunxue/TIW_data/CESM_HR/4xCO2/VVEL/"
 
  fil1 = systemfunc("ls " + dir1+"VVEL.day.0111-0140.10S_10N.180_80W.levidx01_06_025degree_anom.nc")
  fil1 = systemfunc("ls " + dir2+"VVEL.day.0141-0170.10S_10N.180_80W.levidx01_06_025degree_anom.nc") ;2xCO2
@@ -58,11 +58,11 @@ begin
 ;   copy_VarMeta(ta_time,tanom1)
 ;   ta2=tanom1(time|:,lat|:,lon|:)
 ;  
-     fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/PD/VVEL/CESM2.PD.day.VVEL.anom.10-50.fft.nc","c")
+     fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM_HR/PD/VVEL/CESM.PD.day.VVEL.anom.10-50.fft.nc","c")
      fout->va=ta1
-     fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/2xCO2/VVEL/CESM2.2xCO2.day.VVEL.anom.10-50.fft.nc","c")
+     fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM_HR/2xCO2/VVEL/CESM.2xCO2.day.VVEL.anom.10-50.fft.nc","c")
      fout->va=ta1
-     fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/4xCO2/VVEL/CESM2.4xCO2.day.VVEL.anom.10-50.fft.nc","c")
+     fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM_HR/4xCO2/VVEL/CESM.4xCO2.day.VVEL.anom.10-50.fft.nc","c")
      fout->va=ta1
 
  end
