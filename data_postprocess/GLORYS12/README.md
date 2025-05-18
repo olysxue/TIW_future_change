@@ -42,14 +42,9 @@ Scripts:
 
 ### Step 3: Compute TIW Intensity and Eddy Kinetic Energy
 - **TIW intensity**: temporal standard deviation (RMS) of band-passed anomalies in SST, SSH, and velocities  
-  \[
-  \sigma(x,y) = \sqrt{ \frac{1}{N} \sum_t \left( X'_{\mathrm{bp}}(t) \right)^2 }
-  \]
+
 
 - **Eddy kinetic energy (EKE)**: computed from filtered u', v' as:  
-  \[
-  \mathrm{EKE} = \frac{1}{2} \, \rho_0 \left( u'^2 + v'^2 \right), \quad \rho_0 = 1024 \, \mathrm{kg/m^3}
-  \]
 
 Scripts:
 - `calculate_TIW_std_variance_CMEMS_surface.ncl`
