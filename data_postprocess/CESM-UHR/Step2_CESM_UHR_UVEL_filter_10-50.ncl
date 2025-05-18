@@ -9,8 +9,8 @@ begin
  dir3 = "/glade/scratch/aoyunxue/TIW_data/CESM2_HR/4xCO2/UVEL/"
 
  fil1 = systemfunc("ls " + dir1+"UVEL.day.0111-0140.10S_10N.180_80W.levidx01_06_025degree_anom.nc")
- fil2 = systemfunc("ls " + dir1+"UVEL.day.0141-0170.10S_10N.180_80W.levidx01_06_025degree_anom.nc")
- fil3 = systemfunc("ls " + dir1+"UVEL.day.0141-0170.10S_10N.180_80W.levidx01_06_025degree_anom.nc")
+ fil2 = systemfunc("ls " + dir2+"UVEL.day.0141-0170.10S_10N.180_80W.levidx01_06_025degree_anom.nc")
+ fil3 = systemfunc("ls " + dir3+"UVEL.day.0141-0170.10S_10N.180_80W.levidx01_06_025degree_anom.nc")
 
  f1   = addfile(fil1,"r")
  ta = f1->UVEL
