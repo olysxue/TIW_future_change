@@ -4,9 +4,9 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/contributed.ncl"
 load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/shea_util.ncl" 
 
 begin
-  dir1 = "/glade/scratch/aoyunxue/TIW_data/CESM2_HR/PD/density/"
-; dir2 = "/glade/scratch/aoyunxue/TIW_data/CESM2_HR/2xCO2/density/"
- ;dir3 = "/glade/scratch/aoyunxue/TIW_data/CESM2_HR/4xCO2/density/"
+  dir1 = "/glade/scratch/aoyunxue/TIW_data/CESM_HR/PD/density/"
+; dir2 = "/glade/scratch/aoyunxue/TIW_data/CESM_HR/2xCO2/density/"
+ ;dir3 = "/glade/scratch/aoyunxue/TIW_data/CESM_HR/4xCO2/density/"
 
  fil1 = systemfunc("ls " + dir1+"density.day.0111-0140_equator_025degree_10S_10N_anom.nc")
 ; fil1 = systemfunc("ls " + dir2+"density.day.0141-0170_equator_025degree_10S_10N_anom.nc")
@@ -58,11 +58,11 @@ begin
 ;   copy_VarMeta(rhoa_time,rhoanom1)
 ;   rhoa2=rhoanom1(time|:,lat|:,lon|:)
 ;  
-     fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/PD/density/CESM2.PD.day.10S_10N_density.anom.10-50.fft.nc","c")
+     fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM_HR/PD/density/CESM.PD.day.10S_10N_density.anom.10-50.fft.nc","c")
      fout->rhoa=rhoa1
- ;    fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/2xCO2/density/CESM2.2xCO2.day.10S_10N_density.anom.10-50.fft.nc","c")
+ ;    fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM_HR/2xCO2/density/CESM.2xCO2.day.10S_10N_density.anom.10-50.fft.nc","c")
  ;    fout->rhoa=rhoa1  
- ;    fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/4xCO2/density/CESM2.4xCO2.day.10S_10N_density.anom.10-50.fft.nc","c")
+ ;    fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM_HR/4xCO2/density/CESM.4xCO2.day.10S_10N_density.anom.10-50.fft.nc","c")
  ;    fout->rhoa=rhoa1
 
  end
