@@ -44,12 +44,14 @@ Includes:
 - GLORYS12: [https://marine.copernicus.eu](https://marine.copernicus.eu)
 ---
 
-## Dependencies
-NCL (tested with v6.6.2)
+## 🛠️ Dependencies
 
-CDO (Climate Data Operator) for data processing
+- [**NCL**](https://www.ncl.ucar.edu/) (tested with version **6.6.2**)  
+- [**CDO**](https://code.mpimet.mpg.de/projects/cdo) (Climate Data Operators)
 
-## Contact
+---
+
+## 📧 Contact
 For questions or assistance with the code and data, please contact:
 
 Aoyun Xue
