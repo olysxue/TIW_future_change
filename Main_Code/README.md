@@ -20,7 +20,7 @@ All scripts were developed and tested using **NCL version 6.6.2**. Each script c
 ---
 Due to file size constraints, only selected `.nc` are included in this GitHub repo.
 
-▶ **Full processed datasets of CESM-UHR**  are available at Zenodo:10.5281/zenodo.15454130 
+▶ **Full processed datasets of CESM-UHR**  are available at Zenodo:doi:10.5281/zenodo.15454130 
 ▶ **E3SM datasets** are available from [https://aims2.llnl.gov/] 
 ▶ **CMIP HighresMIP datasets** are available from [https://esgf-node.llnl.gov/projects/cmip6/]
 ▶ **GLORYS12** is available at [https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030/description]
