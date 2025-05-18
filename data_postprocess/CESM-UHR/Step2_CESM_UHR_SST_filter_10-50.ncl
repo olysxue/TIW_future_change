@@ -58,11 +58,11 @@ begin
 ;   copy_VarMeta(ta_time,tanom1)
 ;   ta2=tanom1(time|:,lat|:,lon|:)
 ;  
-     fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/PD/SST/CESM.PD.day.10S_10N_SST.anom.10-50.fft.nc","c")
+     fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM_HR/PD/SST/CESM.PD.day.10S_10N_SST.anom.10-50.fft.nc","c")
      fout->ta=ta1
- ;    fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/2xCO2/SST/CESM.2xCO2.day.10S_10N_SST.anom.10-50.fft.nc","c")
+ ;    fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM_HR/2xCO2/SST/CESM.2xCO2.day.10S_10N_SST.anom.10-50.fft.nc","c")
  ;    fout->ta=ta1  
- ;    fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/4xCO2/SST/CESM.4xCO2.day.10S_10N_SST.anom.10-50.fft.nc","c")
+ ;    fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM_HR/4xCO2/SST/CESM.4xCO2.day.10S_10N_SST.anom.10-50.fft.nc","c")
  ;    fout->ta=ta1
 
  end
