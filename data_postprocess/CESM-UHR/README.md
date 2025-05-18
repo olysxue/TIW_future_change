@@ -18,12 +18,12 @@ All scripts were tested with **NCL6.6.2 & cdo 2.0**.
 - **Goal**: Isolate the TIW signal in the 10–50 day band
 - **Method**: Lanczos band-pass filtering on daily anomalies
 - **Scripts**:
-  - `CESM_UHR_SST_filter_10–50.ncl`
-  - `CESM_UHR_SSH_filter_10–50.ncl`
-  - `CESM_UHR_UVEL_filter_10–50.ncl`
-  - `CESM_UHR_VVEL_filter_10–50.ncl`
-  - `CESM_UHR_WVEL_filter_10–50.ncl`
-  - `CESM_UHR_density_filter_10–50.ncl`
+  - `Step2_CESM_UHR_SST_filter_10–50.ncl`
+  - `Step2_CESM_UHR_SSH_filter_10–50.ncl`
+  - `Step2_CESM_UHR_UVEL_filter_10–50.ncl`
+  - `Step2_CESM_UHR_VVEL_filter_10–50.ncl`
+  - `Step2_CESM_UHR_WVEL_filter_10–50.ncl`
+  - `Step2_CESM_UHR_density_filter_10–50.ncl`
 
 ### **Step 3: Compute TIW Intensity Metrics**
 - **Goal**: Quantify TIW amplitude using filtered signal variance
@@ -35,13 +35,22 @@ All scripts were tested with **NCL6.6.2 & cdo 2.0**.
 - **Terms computed**:
   - Barotropic energy conversion (BTR): \[-⟨u'v'⟩ ∂⟨u⟩/∂y\]
   - Baroclinic energy conversion (BCR): \[-⟨ρ'w'⟩/g\]
-- **Input**: Filtered and mean-state fields of velocity and temperature
+- **Input**: 10-50-day bandpass Filtered and monthly mean fields of velocity and temperature
 
 ### **Step 5: Estimate TIW-Induced Fluxes**
 - **Goal**: Assess the dynamical impact of TIWs on large-scale momentum and heat budgets
 - **Terms**:
   - TIW heat flux (u'T', v'T' w'T') and its convergence
   - TIW momentum flux (u'u', u'v', v'v') and its convergence
+
+### **Step 6: Decompose Kinetic Energy (KE)**
+- **Goal**: Separate total kinetic energy (TKE) into TIW-related (TIW-EKE) and large scale (LSKE) components
+- **Method**:
+  - TKE (from daily u and v): ⟨0.5 × ρ × (u² + v²)⟩
+  - LSKE (from monthly mean ū, v̄): 0.5 × ρ × (ū² + v̄²)
+  - **TIW-EKE = TKE − LSKE**
+- **Tools**: Implemented via CDO in `calc_TIW_EKE.sh`
+- **Application**: Used to quantify mesoscale energy maintained by TIWs
 
 ---
 
