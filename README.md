@@ -14,13 +14,13 @@ This repository contains the code supporting the manuscript:
   CESM-UHR postprocessing scripts, including daily climatology removal, 10–50-day filtering, TIW intensity calculation, eddy kinetic energy decomposition, barotropic/baroclinic energy conversion, and TIW flux diagnostics.
 
 - `data_postprocess/E3SM/`  
-  Scripts for E3SMv1 and E3SMv2 outputs (e.g., filtering, TIW metrics, BTR/BCR).
+  Scripts for E3SMv1 and E3SMv2 outputs (e.g., filtering, TIW metrics).
 
 - `data_postprocess/HighresMIP/`  
-  Processing of CMIP6 HighResMIP models (e.g., zonal averaging, TIW indices).
+  Processing of CMIP6 HighResMIP models (e.g., SST-based TIW intensity).
 
 - `data_postprocess/GLORYS12/`  
-  Filtering and metric extraction from the GLORYS12 ocean reanalysis product.
+ TIW metric from the GLORYS12 ocean reanalysis product.
 
 ---
 ## 📦 Data Availability
