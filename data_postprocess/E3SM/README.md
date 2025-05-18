@@ -61,8 +61,8 @@ All scripts were tested with **NCL 6.6.2** and **CDO 2.0**.
 
 - This folder only includes **SST**, **SSH**, and **TIW-EKE** diagnostics.
 - Energy conversion terms (BTR, BCR) and flux-based diagnostics were not computed for E3SM.
-- The region analyzed is the **equatorial Pacific** (approx. 10°S–10°N, 160°E–80°W).
-- Scenarios include **PD**, **2xCO₂**, and **4xCO₂**, consistent with CESM-UHR.
+- The region analyzed is the **equatorial Pacific** (10°S–10°N, 180°–80°W).
+- Scenarios include **PiControl**, **abrupt 4xCO2**.
 
 ---
 
