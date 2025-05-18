@@ -1,7 +1,7 @@
 
 # E3SMv1 and E3SMv2 Tropical Instability Wave (TIW) Diagnostics
 
-This folder contains NCL and CDO scripts used to process **E3SMv1** and **E3SMv2** simulation outputs to calculate TIW intensity. The focus is on SST and SSH variability and eddy kinetic energy (EKE) derived from KE decomposition.
+This folder contains NCL and CDO scripts used to process **E3SMv1** and **E3SMv2** simulation outputs under piControl and abrupt 4xCO2 simulations to calculate TIW intensity. The focus is on SST and SSH variability and eddy kinetic energy (EKE) derived from KE decomposition.
 
 All scripts were tested with **NCL 6.6.2** and **CDO 2.0**.
 
