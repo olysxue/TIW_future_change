@@ -5,7 +5,13 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/shea_util.ncl"
 
 begin
  dir1 = "/glade/scratch/aoyunxue/TIW_data/CESM2_HR/PD/SSH/"
+; dir1 = "/glade/scratch/aoyunxue/TIW_data/CESM2_HR/2xCO2/SSH/"
+; dir1 = "/glade/scratch/aoyunxue/TIW_data/CESM2_HR/4xCO2/SSH/"
+
  fil1 = systemfunc("ls " + dir1+"SSH.day.0111-0140_equator_025degree_10S_10N_anom.nc")
+; fil1 = systemfunc("ls " + dir1+"SSH.day.0141-0170_equator_025degree_10S_10N_anom.nc")
+; fil1 = systemfunc("ls " + dir1+"SSH.day.0141-0170_equator_025degree_10S_10N_anom.nc")
+
  f1   = addfile(fil1,"r")
  ta = f1->SSH(:,{-10:10},{180:280})
    printVarSummary(ta)
@@ -54,9 +60,11 @@ begin
 ;  
      fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/PD/SSH/CESM2.PD.day.10S_10N_SSH.anom.10-50.fft.nc","c")
      fout->ssha=ta1
+    
+ ;    fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/2xCO2/SSH/CESM2.2xCO2.day.10S_10N_SSH.anom.10-50.fft.nc","c")
+ ;    fout->ssha=ta1
      
-    fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/PD/SSH/CESM2.PD.day.10S_10N_SSH.anom.10-60.fft.nc","c")
-    fout->ssha=ta2
-;     fout=addfile("/share/kkraid/aoyunxue/2016-lanina/process-data/noaa/sst.day.anom.20-40.2016-2017.nc","c")
-;     fout->ta=ta2
+  ;   fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/4xCO2/SSH/CESM2.4xCO2.day.10S_10N_SSH.anom.10-50.fft.nc","c")
+  ;   fout->ssha=ta1
+
  end
