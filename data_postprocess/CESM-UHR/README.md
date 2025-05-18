@@ -68,7 +68,7 @@ All scripts were tested with **NCL6.6.2 & cdo 2.0**.
 
 ## 📌 Notes
 
-- All diagnostics are calculated for the **equatorial Pacific** (approx. 5°S–5°N, 160°–90°W).
+- All diagnostics are calculated for the **equatorial Pacific** (approx. 10°S–10°N, 180°–80°W).
 - Filtering and variance are applied on a **daily timescale**, after removing climatology.
 - You may need to modify file paths and variable names to match your local setup.
 
