@@ -5,7 +5,13 @@ load "$NCARG_ROOT/lib/ncarg/nclscripts/csm/shea_util.ncl"
 
 begin
  dir1 = "/glade/scratch/aoyunxue/TIW_data/CESM2_HR/PD/VVEL/"
+ dir2 = "/glade/scratch/aoyunxue/TIW_data/CESM2_HR/2xCO2/VVEL/"
+ dir3 = "/glade/scratch/aoyunxue/TIW_data/CESM2_HR/4xCO2/VVEL/"
+
  fil1 = systemfunc("ls " + dir1+"VVEL.day.0111-0140.10S_10N.180_80W.levidx01_06_025degree_anom.nc")
+ fil1 = systemfunc("ls " + dir2+"VVEL.day.0141-0170.10S_10N.180_80W.levidx01_06_025degree_anom.nc") ;2xCO2
+ fil1 = systemfunc("ls " + dir3+"VVEL.day.0141-0170.10S_10N.180_80W.levidx01_06_025degree_anom.nc") ;4xCO2
+
  f1   = addfile(fil1,"r")
  ta = f1->VVEL
    printVarSummary(ta)
@@ -54,9 +60,9 @@ begin
 ;  
      fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/PD/VVEL/CESM2.PD.day.VVEL.anom.10-50.fft.nc","c")
      fout->va=ta1
-     
-    fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/PD/VVEL/CESM2.PD.day.VVEL.anom.10-60.fft.nc","c")
-    fout->va=ta2
-;     fout=addfile("/share/kkraid/aoyunxue/2016-lanina/process-data/noaa/sst.day.anom.20-40.2016-2017.nc","c")
-;     fout->ta=ta2
+     fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/2xCO2/VVEL/CESM2.2xCO2.day.VVEL.anom.10-50.fft.nc","c")
+     fout->va=ta1
+     fout=addfile("/glade/scratch/aoyunxue/TIW_data/CESM2_HR/4xCO2/VVEL/CESM2.4xCO2.day.VVEL.anom.10-50.fft.nc","c")
+     fout->va=ta1
+
  end
