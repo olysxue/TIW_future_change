@@ -4,7 +4,7 @@ This folder contains scripts and workflows for analyzing **Tropical Instability 
 
 The analysis includes two idealized CMIP6 scenarios:
 - `piControl` (pre-industrial control)
-- `abrupt-4xCO₂` (quadrupled CO2 forcing)
+- `abrupt-4xCO2` (quadrupled CO2 forcing)
 
 ---
 
