@@ -85,6 +85,8 @@ All processed outputs are available at:
 
 ▶ **Zenodo Archive**  
 [https://doi.org/10.5281/zenodo.15454130](https://doi.org/10.5281/zenodo.15454130)
+**Download file**:  
+🗂 [`E3SMv1_TIW_intensity.zip, E3SMv2_TIW_intensity.zip`]
 
 Includes:
 - SST/SSH anomalies and TIW intensity
