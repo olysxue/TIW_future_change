@@ -1,7 +1,7 @@
 #!/bin/bash
 # Author: Aoyun Xue
 # Purpose: Compute daily anomalies for GLORYS12 variables (uo, vo, thetao, zos)
-# Domain: 20°S–20°N, 180°W–60°W | Period: 1993–2023 | Resolution: 0.25°
+# Domain: 10°S–10°N, 180°W–60°W | Period: 1993–2023 | Resolution: 0.25°
 
 
 # === uo ===
@@ -35,5 +35,3 @@ cdo -ydaymean cmems_zos_180.00W-60.00W_10.00S-10.00N_1993-2023_025degree.nc \
 cdo -ydaysub  cmems_zos_180.00W-60.00W_10.00S-10.00N_1993-2023_025degree.nc \
               cmems_zos_180.00W-60.00W_10.00S-10.00N_1993-2023_025degree_clm.nc \
               cmems_zos_180.00W-60.00W_10.00S-10.00_1993-2023_025degree_anom.nc
-
-echo "✅ All anomalies computed and saved."
