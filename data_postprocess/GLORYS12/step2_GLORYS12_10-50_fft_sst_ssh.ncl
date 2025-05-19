@@ -8,8 +8,11 @@ begin
 ;========================================================================================================
  datadir1  = "/glade/derecho/scratch/aoyunxue/reanalysis/CMEMS/anom/"
  fils1     = systemfunc("ls " + datadir1+ "GLOBAL-REANALYSIS-PHY-001-030-DAILY_thetao_surface_anom_10S-10N.nc")
+ fils2     = systemfunc("ls " + datadir1+ "GLOBAL-REANALYSIS-PHY-001-030-DAILY_zos_anom_10S-10N.nc")
+
  f1        = addfile(fils1, "r")
  thetao        = f1->thetao(:,:,:)
+  zos      = f2->zos
  printVarSummary(thetao)
     thetao!0   = "time"
     thetao!1   = "lat"
@@ -17,8 +20,11 @@ begin
     thetao&time= f1->time
     thetao&lat = f1->latitude
     thetao&lon = f1->longitude
+copy_VarMeta(thetao, zos)
  ;=======================================================================================================
   ta_time = thetao(lat|:,lon|:,time|:)
+;  ta_time = zos(lat|:,lon|:,time|:)
+
     fca   = 1./10.
     fcb   = 1./50.  
     cf1   = ezfftf(ta_time)                            ; sub period (2, ntim/2)
@@ -35,6 +41,15 @@ begin
 ;========================================================================================================
   outdir1   = "/glade/derecho/scratch/aoyunxue/reanalysis/CMEMS/anom/"
   out_path1 = outdir1 + "GLOBAL-REANALYSIS-PHY-001-030-DAILY_thetao_surface_anom_10-50_fft.nc" 
+      if(isfilepresent(out_path1)) then
+         system("rm -f " + out_path1)
+      end if
+    fout1 = addfile(out_path1, "c")  
+    fout1->ta  = ta 
+
+; output zos
+  outdir1   = "/glade/derecho/scratch/aoyunxue/reanalysis/CMEMS/anom/"
+  out_path1 = outdir1 + "GLOBAL-REANALYSIS-PHY-001-030-DAILY_zos_anom_10-50_fft.nc" 
       if(isfilepresent(out_path1)) then
          system("rm -f " + out_path1)
       end if
