@@ -14,7 +14,7 @@ The analysis includes two idealized CMIP6 scenarios:
 - From the raw E3SM outputs, extract the following fields:
   - Daily: **SST**, **SSH**, and **total kinetic energy (TKE)**  
     *(Note: TKE is precomputed, not derived in this workflow)*  
-- No u or v extraction from daily files.
+- No u or v extraction from daily files, we cannot calculate TIW-EKE directly based on 10-50-day bandpass filtered velocity fields.
 
 ---
 
