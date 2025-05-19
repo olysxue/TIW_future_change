@@ -81,7 +81,8 @@ Raw GLORYS12V1 daily outputs are available from the **Copernicus Marine Service*
 
 ▶ **Zenodo Archive**  
 [https://doi.org/10.5281/zenodo.15454130](https://doi.org/10.5281/zenodo.15454130)
-
+**Download file**:  
+🗂 [`GLORYS12_TIW_intensity.zip`]
 ---
 
 ## 📧 Contact
