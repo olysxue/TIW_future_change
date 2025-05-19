@@ -37,16 +37,6 @@ The analysis includes two idealized CMIP6 scenarios:
 
 ### Step 5: Compute TIW-EKE from Precomputed KE Fields
 - Decompose total kinetic energy into large-scale and eddy components:
-  - **Total KE**: Provided as daily field (TKE), then monthly averaged
-  - **Background KE**: Computed from monthly-mean ū and v̄ as  
-    \[
-    \mathrm{KE}_{\mathrm{bg}} = \frac{1}{2} \, \rho_0 (\bar{u}^2 + \bar{v}^2), \quad \rho_0 = 1024 \, \mathrm{kg/m^3}
-    \]
-  - **TIW-EKE**:
-    \[
-    \mathrm{TIW\text{-}EKE} = \overline{\mathrm{TKE}} - \mathrm{KE}_{\mathrm{bg}}
-    \]
-- Units: J·m⁻³
 
 ---
 
