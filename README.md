@@ -73,6 +73,16 @@ All variables processed at daily resolution using FFT bandpass (10–50 days) an
 
 ---
 
+## 📦 Citation
+
+If you use this code, please cite:
+
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15462389.svg)](https://doi.org/10.5281/zenodo.15462389)
+
+Xue, A. (2025). *Consistent Projected Weakening of Tropical Instability Waves under Greenhouse Warming*.  
+Zenodo. https://doi.org/10.5281/zenodo.15462389
+
+---
 ## 📧 Contact
 For questions or assistance with the code and data, please contact:
 
