@@ -60,14 +60,14 @@ The analysis includes two idealized CMIP6 scenarios:
 
 ## 📂 Script Summary
 
-| File | Description |
+| File | Description | Software |
 |------|-------------|
-| `Step1_extract_E3SM_concat_var.sh` | Combine UVEL/VVEL/SST/SSH from raw E3SM output |
-| `Step2_*` | Compute SST/SSH anomalies (with/without detrending) |
-| `Step3_*` | Apply 10–50 day bandpass filter |
-| `Step4_1_*` | Calculate TIW SST/SSH intensity (stddev) |
-| `Step4_2_*` | Convert intensity to monthly scale |
-| `Step4_3_*` | Compute TIW-EKE from KE decomposition |
+| `Step1_extract_E3SM_concat_var.sh` | Combine UVEL/VVEL/SST/SSH from raw E3SM output | cdo nco |
+| `Step2_*` | Compute SST/SSH anomalies (with/without detrending) | cdo |
+| `Step3_*` | Apply 10–50 day bandpass filter | ncl |
+| `Step4_1_*` | Calculate TIW SST/SSH intensity (stddev) | cdo |
+| `Step4_2_*` | Convert intensity to monthly scale | ncl |
+| `Step4_3_*` | Compute TIW-EKE from KE decomposition | ncl |
 
 ---
 
