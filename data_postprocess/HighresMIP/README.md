@@ -71,6 +71,8 @@ All processing is done using CDO.
 
 **Zenodo archive**  
 [https://doi.org/10.5281/zenodo.15454130](https://doi.org/10.5281/zenodo.15454130)
+**Download file**:  
+🗂 [`CMIP_highresMIP_TIW_intensity.zip`]
 
 ---
 👤 Contact
