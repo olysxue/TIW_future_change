@@ -17,7 +17,7 @@ All scripts were tested with **NCL 6.6.2** and **CDO 2.0**.
 
 ---
 
-### **Step 2: Apply 10–50 Day Band-Pass Filter**
+### **Step 2: Apply 10–50-Day Fourier Band-Pass Filter**
 - **Goal**: Isolate TIW signals
 - **Method**: Lanczos filter on daily anomalies
 - **Scripts**:
@@ -31,8 +31,8 @@ All scripts were tested with **NCL 6.6.2** and **CDO 2.0**.
 ---
 
 ### **Step 3: Compute TIW Intensity Metrics**
-- **Goal**: Quantify TIW amplitude
-- **Method**: Compute local RMS of filtered SST, SSH, UVEL, VVEL
+- **Goal**: Quantify TIW intensity
+- **Method**: Compute TIW-EKE, standard deviation of filtered SST, SSH, VVEL
 - **Script**: `Step3_calculate_TIW_metric_CESM-UHR.ncl`
 
 ---
@@ -48,7 +48,7 @@ All scripts were tested with **NCL 6.6.2** and **CDO 2.0**.
 
 ---
 
-### **Step 5: Estimate Eddy Heat and Momentum Fluxes**
+### **Step 5: Estimate Eddy Heat and Momentum Flux Convergence**
 - **Goal**: Evaluate TIW impact on heat and momentum transport
 - **Diagnostics**:
   - Eddy heat flux: (u'T', v'T', w'T') and their convergence
@@ -60,7 +60,7 @@ All scripts were tested with **NCL 6.6.2** and **CDO 2.0**.
 ---
 
 ### **Step 6: Decompose Kinetic Energy (KE)**
-- **Goal**: Quantify TIW-related eddy kinetic energy
+- **Goal**: Quantify TIW-EKE
 - **Method**:
   - TKE = 0.5ρ(u² + v²)
   - LSKE = 0.5ρ(ū² + v̄²)
@@ -73,25 +73,25 @@ All scripts were tested with **NCL 6.6.2** and **CDO 2.0**.
 
 | Script | Description |
 |--------|-------------|
-| `Step1_Calculate_daily_anom.sh` | Remove daily climatology |
-| `Step2_CESM_UHR_SST_filter_10–50.ncl` | Band-pass filter SST anomalies |
-| `Step2_CESM_UHR_SSH_filter_10–50.ncl` | Band-pass filter SSH anomalies |
-| `Step2_CESM_UHR_UVEL_filter_10–50.ncl` | Band-pass filter zonal velocity anomalies |
-| `Step2_CESM_UHR_VVEL_filter_10–50.ncl` | Band-pass filter meridional velocity anomalies |
-| `Step2_CESM_UHR_WVEL_filter_10–50.ncl` | Band-pass filter vertical velocity anomalies |
-| `Step2_CESM_UHR_density_10–50_filter.ncl` | Band-pass filter density anomalies |
-| `Step3_calculate_TIW_metric_CESM-UHR.ncl` | Compute TIW variance and RMS metrics |
-| `Step4_calculate_APE.ncl` | Compute baroclinic energy conversion |
-| `Step4_calculate_CKE.ncl` | Compute barotropic energy conversion |
+| `Step1_Calculate_daily_anom.sh` | Remove daily climatology (CDO) |
+| `Step2_CESM_UHR_SST_filter_10–50.ncl` | 10-50-day Band-pass filter SST anomalies (NCL) |
+| `Step2_CESM_UHR_SSH_filter_10–50.ncl` | 10-50-day Band-pass filter SSH anomalies (NCL) |
+| `Step2_CESM_UHR_UVEL_filter_10–50.ncl` | 10-50-day Band-pass filter zonal velocity anomalies (NCL)|
+| `Step2_CESM_UHR_VVEL_filter_10–50.ncl` | 10-50-day Band-pass filter meridional velocity anomalies (NCL)|
+| `Step2_CESM_UHR_WVEL_filter_10–50.ncl` | 10-50-day Band-pass filter vertical velocity anomalies(NCL) |
+| `Step2_CESM_UHR_density_10–50_filter.ncl` | 10-50-day Band-pass filter density anomalies (NCL)|
+| `Step3_calculate_TIW_metric_CESM-UHR.ncl` | Compute TIW-EKE and SST/SSH/VVEL-based metrics (NCL)|
+| `Step4_calculate_APE.ncl` | Compute baroclinic energy conversion rate (NCL) |
+| `Step4_calculate_CKE.ncl` | Compute barotropic energy conversion rate (NCL) |
 | `Step5_calculate_heat_flux_momentum_flux_convergence.ncl` | Calculate eddy flux and convergence (NCL) |
 | `Step5_calculate_eddy_heat_momentum_flux.sh` | Calculate eddy flux (CDO) |
-| `Step6_calculate_TIW_EKE_decomposition.sh` | Decompose total KE to extract TIW-EKE |
+| `Step6_calculate_TIW_EKE_decomposition.sh` | Decompose total KE to extract TIW-EKE (CDO) |
 
 ---
 
 ## 📌 Notes
 
-- Diagnostics are evaluated over the **equatorial Pacific (10°S–10°N, 180°–80°W)**
+- Diagnostics are evaluated over the **equatorial eastern Pacific (10°S–10°N, 180°–80°W)**
 - Filtering and diagnostics are applied on daily anomalies
 - Update variable names and file paths as needed for your system
 
@@ -99,7 +99,7 @@ All scripts were tested with **NCL 6.6.2** and **CDO 2.0**.
 
 ## 📥 Data Access
 
-- Processed TIW data is available at:  
+- CESM-HR simulation output and Processed TIW data is available at:  
   ▶ [https://doi.org/10.5281/zenodo.15454130](https://doi.org/10.5281/zenodo.15454130)
 
 ---
