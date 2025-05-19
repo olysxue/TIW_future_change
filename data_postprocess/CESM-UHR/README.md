@@ -101,6 +101,15 @@ All scripts were tested with **NCL 6.6.2** and **CDO 2.0**.
 
 - CESM-HR simulation output and Processed TIW data is available at:  
   ▶ [https://doi.org/10.5281/zenodo.15454130](https://doi.org/10.5281/zenodo.15454130)
+**Download file**:  
+- 🔹 **CESM_TIW_intensity.zip**
+  Four TIW metrics 
+- 🔹 **CESM_energy.zip**
+   Barotropic (BTR) and baroclinic (BCR) energy conversion rates
+- 🔹 **CESM_feedback.zip**  
+  Monthly TIW-induced feedbacks:
+- 🔹 **CESM_2xCO2.zip**, **CESM_4xCO2.zip**, **CESM_PD.zip**  
+  Raw CESM-UHR simulation outputs used for the diagnostics above.
 
 ---
 
