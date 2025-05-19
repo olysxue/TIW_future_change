@@ -30,13 +30,8 @@ The analysis includes two idealized CMIP6 scenarios:
 ---
 
 ### Step 4: Estimate TIW Intensity
-- Compute the temporal standard deviation (RMS) of filtered SST and SSH:
-- Used as a proxy for TIW strength.
-
----
-
-### Step 5: Compute TIW-EKE from Precomputed KE Fields
-- Decompose total kinetic energy into large-scale and eddy components:
+- Compute the TIW-EKE, standard deviation (RMS) of filtered SST and SSH:
+- TIW-EKE calculation: Decompose total kinetic energy into large-scale and eddy components
 Goal: Quantify TIW-EKE
 Method:
 TKE = 0.5ρ(u² + v²)
