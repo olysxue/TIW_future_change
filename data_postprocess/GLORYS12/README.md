@@ -13,8 +13,6 @@ This folder contains NCL scripts used to extract and quantify **Tropical Instabi
 
 ---
 
-## 🔁 Processing Workflow
-
 ## 🔁 Workflow Summary
 
 ### ✅ Step 1: Daily Anomaly Calculation
