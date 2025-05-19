@@ -69,8 +69,6 @@ All processing is done using CDO.
 ---
 ### 📥 Processed Outputs
 
-All processed outputs (bandpassed SST and TIW intensity fields) are publicly available at:
-
 ▶ **Zenodo archive**  
 [https://doi.org/10.5281/zenodo.15454130](https://doi.org/10.5281/zenodo.15454130)
 ---
