@@ -37,6 +37,11 @@ The analysis includes two idealized CMIP6 scenarios:
 
 ### Step 5: Compute TIW-EKE from Precomputed KE Fields
 - Decompose total kinetic energy into large-scale and eddy components:
+Goal: Quantify TIW-EKE
+Method:
+TKE = 0.5ρ(u² + v²)
+LSKE = 0.5ρ(ū² + v̄²)
+TIW-EKE = TKE − LSKE
 
 ---
 
