@@ -69,8 +69,9 @@ All processing is done using CDO.
 ---
 ### 📥 Processed Outputs
 
-▶ **Zenodo archive**  
+**Zenodo archive**  
 [https://doi.org/10.5281/zenodo.15454130](https://doi.org/10.5281/zenodo.15454130)
+
 ---
 👤 Contact
 Aoyun Xue
