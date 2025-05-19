@@ -9,65 +9,65 @@ This folder contains NCL scripts used to extract and quantify **Tropical Instabi
 - **Source**: CMEMS GLORYS12V1 global reanalysis (1/12° horizontal resolution)
 - **Temporal resolution**: Daily
 - **Variables analyzed**: `thetao` (temperature), `uo`, `vo` (zonal/meridional velocity), `zos` (SSH)
-- **Spatial domain**: 10°S–10°N, 120°E–80°W
+- **Spatial domain**: 10°S–10°N, 180°–80°W
 
 ---
 
 ## 🔁 Processing Workflow
 
-### Step 1: Compute Daily Anomalies
-- Remove the daily climatology to isolate sub-seasonal variability
-- Applied to: SST, SSH, zonal and meridional velocity (uo, vo), and subsurface temperature
+## 🔁 Workflow Summary
 
-Scripts:
-- Embedded in: `CMEMS_10-50_fft_*.ncl`
+### ✅ Step 1: Daily Anomaly Calculation
+- Remove daily climatology to obtain sub-seasonal anomalies
+- Applied to: SST, SSH, `uo`, `vo`, and `thetao`
 
----
-
-### Step 2: Apply 10–50 Day Band-Pass Filter (Fourier)
-- Use FFT-based band-pass filter to isolate TIW-band (10–50 day) signals
-- Applied separately for:
-  - Surface: SST, SSH, u, v
-  - Subsurface: temperature (`thetao`), u, v at selected depths
-
-Scripts:
-- `CMEMS_10-50_fft_u_surface.ncl`
-- `CMEMS_10-50_fft_u_surface_new.ncl`
-- `CMEMS_10-50_fft_v_depth_new.ncl`
-- `CMEMS_10-50_fft_u_depth_new.ncl`
-- `CMEMS_10-50_fft_t_surface.ncl`
-- `CMEMS_10-50_fft_thetao_depth_new.ncl`
+**Script**:  
+- `step1_calculate_GLORYS12_daily_anom.sh`
 
 ---
 
-### Step 3: Compute TIW Intensity and Eddy Kinetic Energy
-- **TIW intensity**: temporal standard deviation (RMS) of band-passed anomalies in SST, SSH, and velocities  
+### ✅ Step 2: Band-Pass Filtering (10–50 Days)
+- Apply FFT-based 10–50 day band-pass filter to isolate TIW-band variability
+- Separate filtering for:
+  - Surface fields: SST, SSH, `uo`, `vo`
+  - Subsurface fields: `thetao`, `uo`, `vo`
 
+**Scripts**:  
+- `step2_GLORYS12_10-50_fft_sst_ssh.ncl`  
+- `step2_GLORYS12_10-50_fft_thetao_depth_new.ncl`  
+- `step2_GLORYS12_10-50_fft_u_depth_new.ncl`  
+- `step2_GLORYS12_10-50_fft_v_depth_new.ncl`
 
-- **Eddy kinetic energy (EKE)**: computed from filtered u', v' as:  
+---
 
-Scripts:
-- `calculate_TIW_std_variance_CMEMS_surface.ncl`
-- `calculate_TIW_std_variance_CMEMS_depth.ncl`
-- `calculate_TIW_variance_stddev_CMEMS_fourier.ncl`
+### ✅ Step 3: TIW Metrics
+- **TIW intensity**: standard deviation of filtered SST, SSH, or velocity anomalies  
+- **TIW EKE**:  
+  - Surface: from filtered `u′`, `v′`  
+  - Full-field decomposition: from monthly KE difference  
+    \[
+    \text{TIW-EKE} = \frac{1}{2} \overline{u^2 + v^2} - \frac{1}{2} (\bar{u}^2 + \bar{v}^2)
+    \]
+
+**Scripts**:  
+- `step3_calculate_TIW_metric_GLORYS12_surface.ncl`  
+- `Step4_calculate_TIW_EKE_GLORYS12_decomposition.ncl`
 
 ---
 
 ## 📂 Output
 
-- TIW-band **variance** and **standard deviation** for:
-  - SST and SSH
-  - Horizontal velocity (uo, vo)
-  - Subsurface temperature
-- TIW-band **EKE fields** at surface and selected subsurface depths  
-- Dimensions: 2D fields (lon × lat) and vertical sections (lon/lat × depth)
+- TIW metrics:
+  - SST-based metric
+  - SSH-based metric
+  - TIW-EKE direct calculation
+  - TIW-EKE indirect calculation
 
 ---
 
 ## 📌 Notes
 
 - Band-pass filtering is performed using **discrete Fourier transform (FFT)** with a 10–50 day window.
-- EKE is computed using filtered velocity anomalies only; no mean-flow KE included.
 - SSH anomalies (`zos_anom`) are included alongside SST for surface diagnostics.
 - These diagnostics are intended for comparison with model-based TIW simulations (e.g., CESM, E3SM).
 
