@@ -17,7 +17,7 @@ This repository contains the code supporting the manuscript:
   Scripts for E3SMv1 and E3SMv2 outputs (e.g., filtering, TIW metrics).
 
 - `data_postprocess/HighresMIP/`  
-  Processing of CMIP6 HighResMIP models (e.g., SST-based TIW intensity).
+  Processing of CMIP6 HighResMIP models (SST-based TIW intensity).
 
 - `data_postprocess/GLORYS12/`  
  TIW metric from the GLORYS12 ocean reanalysis product.
@@ -29,12 +29,12 @@ Due to size limitations, only selected sample NetCDF files are hosted in this re
 The full processed datasets used to generate the figures in this manuscript are archived on Zenodo:
 
 ▶ **Zenodo Archive (TIW-EKE, BTR/BCR, filtered fields, and flux diagnostics)**  
-[https://doi.org/10.5281/zenodo.XXXXXXXX](https://doi.org/10.5281/zenodo.XXXXXXXX)
+[https://doi.org/10.5281/zenodo.15454130](https://doi.org/10.5281/zenodo.15454130)
 
 Includes:
 
 - CESM-UHR: Four TIW metrics, barotropic/baroclinic energy conversion rates (BTR, BCR), heat & momentum flux convergence
-- E3SMv1/v2: TIW-EKE, SST and SSH-based TIW metrics
+- E3SMv1/v2: TIW-EKE, SST/SSH/VVEL-based TIW metrics
 - GLORYS12: TIW intensity diagnostics from EKE, SST, SSH, and velocity reanalysis fields
 
 ▶ **Raw model output sources:**
