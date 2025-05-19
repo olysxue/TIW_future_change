@@ -107,8 +107,7 @@ All scripts were tested with **NCL 6.6.2** and **CDO 2.0**.
    Four TIW metrics 
 - 🔹 **CESM_energy.zip**
    Barotropic (BTR) and baroclinic (BCR) energy conversion rates
-- 🔹 **CESM_feedback.zip**  
-   Monthly TIW-induced feedbacks
+- 🔹 **CESM_feedback.zip**  Monthly TIW-induced feedbacks
 - 🔹 **CESM_2xCO2.zip**, **CESM_4xCO2.zip**, **CESM_PD.zip**  
    Raw CESM-UHR simulation outputs used for the diagnostics above.
 
