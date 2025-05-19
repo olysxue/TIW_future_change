@@ -20,11 +20,7 @@ The analysis includes two idealized CMIP6 scenarios:
 
 ### Step 2: Remove Mean Seasonal Cycle
 - Compute daily climatology of SST and SSH using a multi-year mean.
-- Subtract the climatology to obtain daily anomalies:
-  \[
-  T'(t,x,y) = T(t,x,y) - \overline{T}_{\mathrm{clim}}(doy, x, y)
-  \]
-
+- Subtract the climatology to obtain daily anomalies
 ---
 
 ### Step 3: Band-Pass Filtering (10–50 Days)
