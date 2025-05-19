@@ -71,9 +71,13 @@ This folder contains NCL scripts used to extract and quantify **Tropical Instabi
 
 ---
 
-## 📥 Data Access
+## 📦 Raw Data Access
 
-All processed outputs are archived at:
+Raw GLORYS12V1 daily outputs are available from the **Copernicus Marine Service**:
+
+▶ [https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030](https://data.marine.copernicus.eu/product/GLOBAL_MULTIYEAR_PHY_001_030)
+
+---
 
 ▶ **Zenodo Archive**  
 [https://doi.org/10.5281/zenodo.15454130](https://doi.org/10.5281/zenodo.15454130)
