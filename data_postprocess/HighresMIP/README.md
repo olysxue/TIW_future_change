@@ -30,19 +30,20 @@ Each model's `tos_Oday_*.nc` file should be extracted and subsetted over the equ
 
 ## 🔁 Processing Workflow
 
-The following steps are applied to each model's daily SST data:
+The following steps are applied to each model's daily SST data: 
 
 ✅ Step 1: Select time range
 cdo selyear,<start>/<end> input.nc temp1.nc
----
+
 ✅ Step 2: Set missing values to zero
 cdo setmisstoc,0 temp1.nc temp2.nc
----
+
 ✅ Step 3: Apply 10–50 day band-pass filter
 cdo bandpass,7.3,36.5 -del29feb temp2.nc output_10-50fft.nc
----
+
 ✅ Step 4: Compute monthly standard deviation (TIW intensity)
 cdo monstd output_10-50fft.nc output_10-50fft_std.nc
+
 ---
 📌 Notes
 Only tos (SST) is used; velocity and SSH fields are not available for HighResMIP daily outputs.
