@@ -45,7 +45,8 @@ cdo bandpass,7.3,36.5 -del29feb temp2.nc output_10-50fft.nc
 cdo monstd output_10-50fft.nc output_10-50fft_std.nc
 
 ---
-📌 Notes
+
+## 📌 Notes
 Only tos (SST) is used; velocity and SSH fields are not available for HighResMIP daily outputs.
 
 Leap days (Feb 29) are removed to ensure a regular calendar before FFT.
