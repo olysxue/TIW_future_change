@@ -2,6 +2,14 @@
 
 # locations of files
 basedir="/glade/derecho/scratch/aoyunxue/CO2/E3SM/picontrol/"
+# Script to post-process E3SM output
+
+This repository contains some scripts to do manual CMORization of output from the E3SMv1 and v2 simulations. 
+
+Contents of the repository:
+- extract_concat_var.sh
+  Shell script to extract daily ocean variables from annual output files, concatenate into a single file, rename according to CMOR conventions
+
 
 # locations of output files
 OUTPUT_DIR=/glade/derecho/scratch/aoyunxue/CO2/E3SM/picontrol/
