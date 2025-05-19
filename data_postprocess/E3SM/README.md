@@ -61,7 +61,7 @@ The analysis includes two idealized CMIP6 scenarios:
 ## 📂 Script Summary
 
 | File | Description | Software |
-|------|-------------|
+|------|-------------|----------|
 | `Step1_extract_E3SM_concat_var.sh` | Combine UVEL/VVEL/SST/SSH from raw E3SM output | cdo nco |
 | `Step2_*` | Compute SST/SSH anomalies (with/without detrending) | cdo |
 | `Step3_*` | Apply 10–50 day bandpass filter | ncl |
