@@ -32,11 +32,11 @@ Each model's `tos_Oday_*.nc` file should be extracted and subsetted over the equ
 
 The following steps are applied to each model's daily SST data:
 
-### ✅ Step 1: Select time range
+✅ Step 1: Select time range
 ```bash
 cdo selyear,<start>/<end> input.nc temp1.nc
 ---
-### ✅ Step 2: Set missing values to zero
+✅ Step 2: Set missing values to zero
 cdo setmisstoc,0 temp1.nc temp2.nc
 ---
 ✅ Step 3: Apply 10–50 day band-pass filter
