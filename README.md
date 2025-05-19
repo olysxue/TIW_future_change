@@ -32,7 +32,7 @@ The CESM-UHR simulations and full processed datasets used to generate the figure
 
 
 - 🔹 **CESM_2xCO2.zip**, **CESM_4xCO2.zip**, **CESM_PD.zip**  
-  Raw CESM-UHR simulation outputs used for the diagnostics.
+  Raw CESM-UHR simulation outputs used for the diagnostics (daily SST, SSH, wind stress, 3D temp and currents, etc.).
   
 - 🔹 **CESM_TIW_intensity.zip**  
   TIW intensity metrics including:
@@ -69,6 +69,7 @@ All variables processed at daily resolution using FFT bandpass (10–50 days) an
 
 - [**NCL**](https://www.ncl.ucar.edu/) (tested with version **6.6.2**)  
 - [**CDO**](https://code.mpimet.mpg.de/projects/cdo) (Climate Data Operators)
+- [**NCO**](https://nco.sourceforge.net/) (NetCDF Operators; used for variable merging, dimension trimming, etc.)
 
 ---
 
