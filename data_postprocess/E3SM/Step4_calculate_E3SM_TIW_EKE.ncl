@@ -164,7 +164,5 @@ begin
   fout->LSKE       = lske
   fout->TIW_EKE    = eke
   fout->TIW_EKE_mean = eke_mean
-
-
 end
 
