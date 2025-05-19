@@ -10,7 +10,7 @@ for SCEN in "${SCENARIOS[@]}"; do
 
   # === Input file name by scenario ===
   if [ "$SCEN" == "picontrol" ]; then
-    T_RANGE="01110101-01401231"
+    T_RANGE="00010101-05001231"
   else
     T_RANGE="00010101-01501231"
   fi
