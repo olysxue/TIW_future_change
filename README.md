@@ -5,37 +5,58 @@ This repository contains the code supporting the manuscript:
 ## 🗂️ Repository Structure
 
 - `Main_code/`  
-  Scripts to produce the main figures in the main text.
+  Scripts to produce the main figures1-4 in the main text.
   
 - `Extended_data_code/`  
   Scripts for Extended Data Figures 1–10.
 
 - `data_postprocess/CESM-UHR/`  
-  CESM-UHR postprocessing scripts, including daily climatology removal, 10–50-day filtering, TIW intensity calculation, eddy kinetic energy decomposition, barotropic/baroclinic energy conversion, and TIW flux diagnostics.
+  CESM-UHR  data postprocessing scripts, including daily climatology removal, 10–50-day filtering, TIW intensity calculation, eddy kinetic energy decomposition, barotropic/baroclinic energy conversion, and TIW flux diagnostics.
 
 - `data_postprocess/E3SM/`  
-  Scripts for E3SMv1 and E3SMv2 outputs (e.g., filtering, TIW metrics).
+  data postprocessing Scripts for E3SMv1 and E3SMv2 outputs (e.g., filtering, TIW metrics).
 
 - `data_postprocess/HighresMIP/`  
-  Processing of CMIP6 HighResMIP models (SST-based TIW intensity).
+  postprocessing of CMIP6 HighResMIP models (SST-based TIW intensity).
 
 - `data_postprocess/GLORYS12/`  
- TIW metric from the GLORYS12 ocean reanalysis product.
+ TIW metric calculations from the GLORYS12 ocean reanalysis product.
 
 ---
 ## 📦 Data Availability
 
-Due to size limitations, only selected sample NetCDF files are hosted in this repository.  
-The full processed datasets used to generate the figures in this manuscript are archived on Zenodo:
+The CESM-UHR simulations and full processed datasets used to generate the figures in this manuscript are archived on Zenodo:
 
 ▶ **Zenodo Archive (TIW-EKE, BTR/BCR, filtered fields, and flux diagnostics)**  
 [https://doi.org/10.5281/zenodo.15454130](https://doi.org/10.5281/zenodo.15454130)
 
-Includes:
 
-- CESM-UHR: Four TIW metrics, barotropic/baroclinic energy conversion rates (BTR, BCR), heat & momentum flux convergence
-- E3SMv1/v2: TIW-EKE, SST/SSH/VVEL-based TIW metrics
-- GLORYS12: TIW intensity diagnostics from EKE, SST, SSH, and velocity reanalysis fields
+- 🔹 **CESM_2xCO2.zip**, **CESM_4xCO2.zip**, **CESM_PD.zip**  
+  Raw CESM-UHR simulation outputs used for the diagnostics.
+  
+- 🔹 **CESM_TIW_intensity.zip**  
+  TIW intensity metrics including:
+  - Eddy kinetic energy (TIW-EKE)
+  - Std of SST, SSH, and vertical velocity (VVEL) band-passed at 10–50 days
+
+- 🔹 **CESM_energy.zip**  
+  Barotropic (BTR) and baroclinic (BCR) energy conversion rates computed in CESM-UHR, supporting TIW energetics analysis.
+
+- 🔹 **CESM_feedback.zip**  
+  Monthly TIW-induced feedbacks:
+  - Heat flux convergence
+  - Momentum flux convergence
+
+- 🔹 **E3SM_TIW_intensity.zip**  
+   - Eddy kinetic energy (TIW-EKE)
+   - Std of SST and SSH band-passed at 10–50 days
+
+- 🔹 **GLORYS12_TIW_metrics.zip**  
+   TIW intensity metrics including:
+  - Eddy kinetic energy (TIW-EKE)
+  - Std of SST, SSH, and vertical velocity (VVEL) band-passed at 10–50 days
+
+All variables processed at daily resolution using FFT bandpass (10–50 days) and converted to monthly std or variance maps.
 
 ▶ **Raw model output sources:**
 - CESM-UHR: [https://climatedata.ibs.re.kr](https://climatedata.ibs.re.kr)  
