@@ -41,23 +41,23 @@ do
 done
 
 # Concatenate year files into a single file
-ncrcat sst*.nc tos_day_E3SM-1-0_picontrol_gr_00010101-00831231.nc
-ncrcat ssh*.nc zos_day_E3SM-1-0_picontrol_gr_00010101-00831231.nc
-ncrcat KE*.nc KE_day_E3SM-1-0_picontrol_gr_00010101-00831231.nc
+ncrcat sst*.nc tos_day_E3SM-1-0_picontrol_gr_00010101-05001231.nc
+ncrcat ssh*.nc zos_day_E3SM-1-0_picontrol_gr_00010101-05001231.nc
+ncrcat KE*.nc KE_day_E3SM-1-0_picontrol_gr_00010101-05001231.nc
 
 # Rename concatenated variables to CMORized names
-ncrename -v temperatureAtSurface,tos tos_day_E3SM-1-0_picontrol_gr_00010101-00831231.nc
-ncrename -v ssh,zos zos_day_E3SM-1-0_picontrol_gr_00010101-00831231.nc
-ncrename -v kineticEnergyAtSurface,KE KE_day_E3SM-1-0_picontrol_gr_00010101-00831231.nc
+ncrename -v temperatureAtSurface,tos tos_day_E3SM-1-0_picontrol_gr_00010101-05001231.nc
+ncrename -v ssh,zos zos_day_E3SM-1-0_picontrol_gr_00010101-05001231.nc
+ncrename -v kineticEnergyAtSurface,KE KE_day_E3SM-1-0_picontrol_gr_00010101-05001231.nc
 # Make new directory if it doesn't already exist
 mkdir -p /glade/derecho/scratch/aoyunxue/CO2/E3SM/picontrol/tos
 mkdir -p /glade/derecho/scratch/aoyunxue/CO2/E3SM/picontrol/zos
 mkdir -p /glade/derecho/scratch/aoyunxue/CO2/E3SM/picontrol/KE
 
 # Copy the output into the new location
-cp tos_day_E3SM-1-0_picontrol_gr_00010101-00831231.nc /glade/derecho/scratch/aoyunxue/CO2/E3SM/picontrol/tos
-cp zos_day_E3SM-1-0_picontrol_gr_00010101-00831231.nc /glade/derecho/scratch/aoyunxue/CO2/E3SM/picontrol/zos
-cp KE_day_E3SM-1-0_picontrol_gr_00010101-00831231.nc  /glade/derecho/scratch/aoyunxue/CO2/E3SM/picontrol/KE
+cp tos_day_E3SM-1-0_picontrol_gr_00010101-05001231.nc /glade/derecho/scratch/aoyunxue/CO2/E3SM/picontrol/tos
+cp zos_day_E3SM-1-0_picontrol_gr_00010101-05001231.nc /glade/derecho/scratch/aoyunxue/CO2/E3SM/picontrol/zos
+cp KE_day_E3SM-1-0_picontrol_gr_00010101-05001231.nc  /glade/derecho/scratch/aoyunxue/CO2/E3SM/picontrol/KE
 # Remove temporary files
 rm sst*.nc
 rm ssh*.nc
