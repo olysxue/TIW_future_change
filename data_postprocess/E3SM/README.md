@@ -25,15 +25,12 @@ The analysis includes two idealized CMIP6 scenarios:
 
 ### Step 3: Band-Pass Filtering (10–50 Days)
 - Apply a 10-50-day Fourier band-pass filter to the SST and SSH anomalies to isolate TIW-band variability.
-- Output: Fourier Band-passed SST and SSH fields (`*_bp.nc`)
+- Output: Fourier Band-passed SST and SSH fields
 
 ---
 
 ### Step 4: Estimate TIW Intensity
 - Compute the temporal standard deviation (RMS) of filtered SST and SSH:
-  \[
-  \mathrm{TIW}_{\mathrm{intensity}}(x,y) = \sqrt{ \frac{1}{N} \sum_t T'_{\mathrm{bp}}(t)^2 }
-  \]
 - Used as a proxy for TIW strength.
 
 ---
