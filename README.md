@@ -1,4 +1,4 @@
-# Code for "Consistent Projected weakening of Tropical Instability Waves under greenhouse warming" submitted to *Nature Communications*.
+# Code for "Consistent Projected changes of Tropical Instability Waves under greenhouse warming" submitted to *Nature Communications*.
 
 This repository contains the code supporting the manuscript:
 
