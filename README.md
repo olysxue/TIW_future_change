@@ -79,7 +79,7 @@ If you use this code, please cite:
 
 [![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.15462389.svg)](https://doi.org/10.5281/zenodo.15462389)
 
-Xue, A. (2025). *Consistent Projected Weakening of Tropical Instability Waves under Greenhouse Warming*.  
+Xue, A. (2025). *Consistent Projected changes of Tropical Instability Waves under Greenhouse Warming*.  
 Zenodo. https://doi.org/10.5281/zenodo.15462389
 
 ---
