@@ -41,7 +41,7 @@ All scripts were tested with **NCL 6.6.2** and **CDO 2.0**.
 - **Goal**: Identify TIW energy sources
 - **Terms**:
   - Barotropic conversion (BTR): \[-⟨u'v'⟩ ∂⟨u⟩/∂y\]
-  - Baroclinic conversion (BCR): \[-⟨ρ'w'\⟩/g\]
+  - Baroclinic conversion (BCR): \[-g⟨ρ'w'\⟩\]
 - **Scripts**:
   - `Step4_calculate_APE.ncl`
   - `Step4_calculate_CKE.ncl`
