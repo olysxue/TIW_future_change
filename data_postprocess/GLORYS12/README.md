@@ -42,7 +42,7 @@ This folder contains NCL scripts used to extract and quantify **Tropical Instabi
 - **TIW intensity**: standard deviation of filtered SST, SSH, or velocity anomalies  
 - **TIW EKE**:  
   - Surface: from filtered `u′`, `v′`  
-  - Full-field decomposition: from monthly KE difference  
+  - Full-field decomposition: from monthly KE difference 
      *TKE = 0.5ρ(u² + v²)*
      *LSKE = 0.5ρ(ū² + v̄²)*
      *TIW-EKE = TKE − LSKE*
