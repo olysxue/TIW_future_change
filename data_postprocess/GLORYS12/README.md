@@ -43,9 +43,6 @@ This folder contains NCL scripts used to extract and quantify **Tropical Instabi
 - **TIW EKE**:  
   - Surface: from filtered `u′`, `v′`  
   - Full-field decomposition: from monthly KE difference  
-    \[
-    \text{TIW-EKE} = \frac{1}{2} \overline{u^2 + v^2} - \frac{1}{2} (\bar{u}^2 + \bar{v}^2)
-    \]
 
 **Scripts**:  
 - `step3_calculate_TIW_metric_GLORYS12_surface.ncl`  
