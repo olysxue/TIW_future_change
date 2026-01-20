@@ -389,11 +389,11 @@ plot5 = gsn_csm_contour_map(wks,APE_4xCO2_mean,res)
   txid1     = gsn_create_text(wks, "~F22~a    PD-BTR", txres)
   txid2     = gsn_create_text(wks, "~F22~b    2xCO2-BTR", txres)
   txid3     = gsn_create_text(wks, "~F22~c    4xCO2-BTR", txres)
-  txid03    = gsn_create_text(wks, "10~S~-6~N~Jm~S~-3~N~s", txres)
+  txid03    = gsn_create_text(wks, "10~S~-6~N~Jm~S~-3~N~s~S~-1~N", txres)
   txid4     = gsn_create_text(wks, "~F22~d    PD-BCR", txres)
   txid5     = gsn_create_text(wks, "~F22~e    2xCO2-BCR", txres)
   txid6     = gsn_create_text(wks, "~F22~f    4xCO2-BCR", txres)
-  txid06    = gsn_create_text(wks,  "10~S~-6~N~Jm~S~-3~N~s", txres)
+  txid06    = gsn_create_text(wks,  "10~S~-6~N~Jm~S~-3~N~s~S~-1~N", txres)
  
   amres                  = True
   amres@amParallelPosF   = -0.485     ; 0.5 This is the right edge of the plot.
